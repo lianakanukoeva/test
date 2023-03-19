@@ -1,17 +1,17 @@
 <template>
 <div class="page">
   <h2 class="title page__title">Текст перед полем ввода</h2>
-  <HelloWorld />
+  <FormInput />
 </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import FormInput from './components/FormInput.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    FormInput
   }
 }
 </script>

@@ -17,7 +17,7 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'FormInput',
   data() {
     return {
       count: ''
