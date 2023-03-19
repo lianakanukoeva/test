@@ -23,6 +23,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #303030;;
   margin-top: 60px;
+  padding: 0 30px;
 }
 .page {
   &__title {

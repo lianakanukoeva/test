@@ -1,6 +1,6 @@
 <template>
     <form class="form page__form">
-      <div class="form__input" :class="{ form__input_error: count.length > 5 }">
+      <div class="form__input" :class="{ form__input_error: count.length > 1000 }">
         <textarea class="form__textarea" placeholder=" " v-model="count"></textarea>
         <label class="form__label">Название поля</label>
         <div class="form__load">
@@ -9,7 +9,7 @@
           </svg>
         </div>
       </div>
-      <div class="form__error" v-if="count.length > 5">Ошибка</div>
+      <div class="form__error" v-if="count.length > 1000">Ошибка</div>
       <div class="form__counter">{{ count.length }}/1000</div>
       <button class="form__button" @click.prevent="count=''">Очистить</button>
     </form>
