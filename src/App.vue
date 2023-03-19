@@ -1,5 +1,8 @@
 <template>
+<div class="page">
+  <h2 class="title page__title">Текст перед полем ввода</h2>
   <HelloWorld />
+</div>
 </template>
 
 <script>
@@ -18,8 +21,12 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  color: #303030;;
   margin-top: 60px;
+}
+.page {
+  &__title {
+    font-size: 18px;
+  }
 }
 </style>
