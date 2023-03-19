@@ -3,6 +3,11 @@
       <div class="form__input" :class="{ form__input_error: count.length > 5 }">
         <textarea class="form__textarea" placeholder=" " v-model="count"></textarea>
         <label class="form__label">Название поля</label>
+        <div class="form__load">
+          <svg class="spinner" viewBox="0 0 50 50">
+            <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
+          </svg>
+        </div>
       </div>
       <div class="form__error" v-if="count.length > 5">Ошибка</div>
       <div class="form__counter">{{ count.length }}/1000</div>
@@ -66,6 +71,19 @@ export default {
     top: 4px;
     font-size: 12px;
   }
+  &__load {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 7px;
+    right: 7px;
+    animation: 1s linear infinite load;
+    svg circle {
+      stroke: #00B6D0;
+      stroke-linecap: round;
+      stroke-dasharray: 75, 100;
+    }
+  }
   &__error {
     color: #D6675C;
   }
@@ -82,6 +100,10 @@ export default {
   }
   &__counter {
     color: #878F97;
+  }
+  @keyframes load{
+      0% {transform: rotateZ(0deg);}
+      100% {transform: rotateZ(360deg);}
   }
 }
 </style>
